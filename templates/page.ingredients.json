@@ -1,0 +1,89 @@
+{
+  "sections": {
+    "main": {
+      "type": "page",
+      "disabled": true,
+      "settings": {
+        "kicker": "",
+        "show_title": true,
+        "show_content": true,
+        "text_size": 2,
+        "align_text": "text-left",
+        "height": "margin--small",
+        "width": "wrapper",
+        "text_color": "text--neutral",
+        "bg": "palette--light bg--neutral"
+      }
+    },
+    "1645454765195ffd87": {
+      "type": "section-columns",
+      "blocks": {
+        "16454547653af5e448-0": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "title": "Ingredient 1",
+            "text": "<p>Add a video popup link to show a play button.  Share blog posts, products, or promotions with your customers. Use this text to describe products, share details on availability and style, or as a space to display recent reviews or FAQs.<\/p>",
+            "button_label": "",
+            "button_link": "",
+            "enable_video": false,
+            "video_link": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc"
+          }
+        },
+        "16454547653af5e448-1": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "title": "Ingredient 2",
+            "text": "<p>Add a video popup link to show a play button.  Share blog posts, products, or promotions with your customers. Use this text to describe products, share details on availability and style, or as a space to display recent reviews or FAQs.<\/p>",
+            "button_label": "",
+            "button_link": "",
+            "enable_video": false,
+            "video_link": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc"
+          }
+        },
+        "16454547653af5e448-2": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "title": "Ingredient 3",
+            "text": "<p>Add a video popup link to show a play button.  Share blog posts, products, or promotions with your customers. Use this text to describe products, share details on availability and style, or as a space to display recent reviews or FAQs.<\/p>",
+            "button_label": "",
+            "button_link": "",
+            "enable_video": false,
+            "video_link": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc"
+          }
+        },
+        "78481d60-f1c3-4da8-b05e-f960cb8a6769": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "title": "Ingredient 4",
+            "text": "<p>Add a video popup link to show a play button.  Share blog posts, products, or promotions with your customers. Use this text to describe products, share details on availability and style, or as a space to display recent reviews or FAQs.<\/p>",
+            "button_label": "",
+            "button_link": "",
+            "enable_video": false,
+            "video_link": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc"
+          }
+        }
+      },
+      "block_order": [
+        "16454547653af5e448-0",
+        "16454547653af5e448-1",
+        "16454547653af5e448-2",
+        "78481d60-f1c3-4da8-b05e-f960cb8a6769"
+      ],
+      "settings": {
+        "title": "Text columns with images",
+        "bg": "palette--light bg--neutral",
+        "align_text": "text-center",
+        "scale_image": true,
+        "aspect_ratio": 1
+      }
+    }
+  },
+  "order": [
+    "main",
+    "1645454765195ffd87"
+  ]
+}

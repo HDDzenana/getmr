@@ -1,0 +1,618 @@
+{
+  "sections": {
+    "hero": {
+      "type": "section-hero",
+      "settings": {
+        "add-cls": "button-set desk-middle-center",
+        "image": "shopify:\/\/shop_images\/Hero_Banner.jpg",
+        "mobile_image": "shopify:\/\/shop_images\/mobile-banner.jpg",
+        "bg_position": "center-center",
+        "height": "use_pixels_650",
+        "overlay_opacity": 20,
+        "overlay_color": "#000000",
+        "kicker": "",
+        "title": "Dermatologist-Recommended All-In-One Skincare for Men",
+        "richtext": "<p>EVERYTHING YOU NEED. NOTHING YOU DON’T.<\/p>",
+        "text_align": "align--middle-left",
+        "text_color": "text--white",
+        "link_text": "GET THE DAILY",
+        "link": "shopify:\/\/collections\/all",
+        "button_color": "btn--primary",
+        "button_style": "btn"
+      }
+    },
+    "1648632075352ab182": {
+      "type": "slider_text",
+      "blocks": {
+        "fbe36b0b-8c7e-4e89-b8c3-6a495abe09b0": {
+          "type": "slide",
+          "settings": {
+            "text": "<“I knew that if we could help reduce men's risk of \n <span style=\"text-decoration: underline;\"> skin cancer by 40%<\/span> and <span style=\"text-decoration:underline;\">aging by 90%<\/span> in one product. <span style=\"text-decoration: underline;\">That would be a big deal.\"<\/span><br\/><br\/>\n\n<h6>- Dr. Beth Goldstein, <br\/>Dermatologist and Co-Founder <\/h6>",
+            "font_size_footer_menu": 24
+          }
+        }
+      },
+      "block_order": [
+        "fbe36b0b-8c7e-4e89-b8c3-6a495abe09b0"
+      ],
+      "settings": {
+        "background_color": "#3d5137",
+        "title": "",
+        "title_size": 22,
+        "retangle": false,
+        "silder_type": "arrow",
+        "color_title": "#f3f1ec",
+        "slider_arrows_color": "#f3f1ec",
+        "arrows_font_new": "sans-serif"
+      }
+    },
+    "16486332950cefab00": {
+      "type": "pressbar-v2",
+      "blocks": {
+        "6a2bd22d-44cd-48aa-b5ac-6d1c73a2d071": {
+          "type": "slide",
+          "settings": {
+            "header_logo_image": "shopify:\/\/shop_images\/Logo-Rolling-Stone.png",
+            "left_text": "",
+            "right_text": "",
+            "logo_link": ""
+          }
+        },
+        "5dbc27bb-f129-4536-b5c2-7990c33a0302": {
+          "type": "slide",
+          "settings": {
+            "header_logo_image": "shopify:\/\/shop_images\/Golf.png",
+            "left_text": "",
+            "right_text": "",
+            "logo_link": ""
+          }
+        },
+        "9f5e4954-5fcc-469c-b637-dca0b7bb62f6": {
+          "type": "slide",
+          "settings": {
+            "header_logo_image": "shopify:\/\/shop_images\/Men_s_Health.png",
+            "left_text": "",
+            "right_text": "",
+            "logo_link": ""
+          }
+        },
+        "1e7e3cfa-3a5a-423c-8a9c-67926ce9d1b4": {
+          "type": "slide",
+          "settings": {
+            "header_logo_image": "shopify:\/\/shop_images\/Todays_Logo_2021_1.png",
+            "left_text": "",
+            "right_text": "",
+            "logo_link": ""
+          }
+        },
+        "389e9864-d5b8-4d80-b401-69c78f0aea5a": {
+          "type": "slide",
+          "settings": {
+            "header_logo_image": "shopify:\/\/shop_images\/Forbes_1.png",
+            "left_text": "",
+            "right_text": "",
+            "logo_link": ""
+          }
+        },
+        "236a4eeb-a243-4e5e-9cff-0f486c61e29a": {
+          "type": "slide",
+          "disabled": true,
+          "settings": {
+            "left_text": "",
+            "right_text": "",
+            "logo_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "6a2bd22d-44cd-48aa-b5ac-6d1c73a2d071",
+        "5dbc27bb-f129-4536-b5c2-7990c33a0302",
+        "9f5e4954-5fcc-469c-b637-dca0b7bb62f6",
+        "1e7e3cfa-3a5a-423c-8a9c-67926ce9d1b4",
+        "389e9864-d5b8-4d80-b401-69c78f0aea5a",
+        "236a4eeb-a243-4e5e-9cff-0f486c61e29a"
+      ],
+      "settings": {
+        "background_color": "#f3f1ec",
+        "padding_size": 20,
+        "text_position": "center",
+        "header_logo_position": "img-left",
+        "image_type": "square",
+        "font_size_left_text": 22,
+        "font_size_right_text": 22,
+        "color_title": "#3d5137",
+        "slider_autoplay": "false",
+        "event_type": "false",
+        "slider_autospeed": "1000",
+        "slider_level": "0.002",
+        "main_font_new": "mono"
+      }
+    },
+    "164881302144758727": {
+      "type": "backed-by-science",
+      "settings": {
+        "title": "<h1> The Daily 3-in-1 Face Lotion For Men <\/h1>\n<h7>Moisturize, Antioxidant-rich Aftershave, Mineral Sunscreen<\/h7>",
+        "middle-image": "shopify:\/\/shop_images\/Frame_1138.png",
+        "mobile-image": "shopify:\/\/shop_images\/Frame_1137.png",
+        "footer-title": "<h2>Three Steps Reduced to One \n<\/h2>",
+        "button_label": "BUY NOW",
+        "button_bg": "#6a7033",
+        "button_bg_hover": "#3d5137",
+        "button_link": "shopify:\/\/products\/face-moisturizer-with-sunscreen-age-defense"
+      }
+    },
+    "1648831947832beefc": {
+      "type": "parallax",
+      "blocks": {
+        "2b8fe004-2f73-4602-9fb9-c65009a7a792": {
+          "type": "Image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Group_1_d848dfbe-fa1e-48ee-8df7-82d289a98620.png",
+            "image_height": 13,
+            "image_width": 100,
+            "mobile_image": "shopify:\/\/shop_images\/Group_1_18321039-88e9-480f-8266-ef7cc33781c5.png",
+            "mobile_image_width": 100,
+            "mobile_image_height": 5,
+            "aspect_ratio": "none",
+            "position": "fill",
+            "mobile_fit": "fill"
+          }
+        }
+      },
+      "block_order": [
+        "2b8fe004-2f73-4602-9fb9-c65009a7a792"
+      ],
+      "settings": {
+        "bg": "#FAFAFA",
+        "margin-top": 0
+      }
+    },
+    "164883237363b09d97": {
+      "type": "section-richtext",
+      "settings": {
+        "new-design": false,
+        "kicker": "",
+        "title": "WELCOME TO YOUR MODERN RITUAL",
+        "text": "<p>Clinically-backed ingredients, in <em>one<\/em> convenient daily application help to moisturize, soothe after shaving and protect your skin from year-round UV rays. <\/p><p><strong>Ingredient Highlights: <\/strong>Non-nano zinc oxide, niacinamide, lactobionic acid.<\/p>",
+        "text_size": 3,
+        "text_columns": 1,
+        "align_text": "text-center",
+        "button_text": "READ FULL INGREDIENT LIST",
+        "button_url": "shopify:\/\/pages\/ingredients",
+        "button_color": "btn--neutral",
+        "button_style": "caps--link",
+        "height": "margin--medium",
+        "width": "wrapper",
+        "text_color": "text--neutral",
+        "bg": "palette--light bg--neutral"
+      }
+    },
+    "16486478164863c7eb": {
+      "type": "section-product",
+      "blocks": {
+        "164864781600492584-0": {
+          "type": "title",
+          "settings": {
+            "product_show_vendor": false
+          }
+        },
+        "f6c90023-26e1-42f3-9be8-22c0946b8a31": {
+          "type": "shopify:\/\/apps\/okendo-product-reviews-ugc\/blocks\/star-rating\/bb689e69-ea70-4661-8fb7-ad24a2e23c29",
+          "settings": {
+            "product": "{{section.settings.home_product}}"
+          }
+        },
+        "164864781600492584-1": {
+          "type": "form",
+          "settings": {
+            "variant_form": "button",
+            "show_quantity": true,
+            "show_remaining": false,
+            "enable_payment_button": true,
+            "subscriptions_enable_selectors": true,
+            "info_page": ""
+          }
+        },
+        "164864781600492584-2": {
+          "type": "description",
+          "disabled": true,
+          "settings": {
+            "read_more": true,
+            "style": "tabs",
+            "title_1": "Tab",
+            "raw_content_1": "<p>This content type will accept <strong>rich text<\/strong> to help with adding styles and links to additional pages or content. Use this to add supplementary information to help your buyers.<\/p>",
+            "title_2": "Info",
+            "raw_content_2": "<p>You can use product metafields to assign content to this tab that is unique to an individual product.  Use tabs to highlight unique features, sizing information, or other sales information.<\/p>",
+            "title_3": "INGREDIENTS",
+            "raw_content_3": "<p>Essential ingredients optimal for your skin health, in one convenient daily application. Plant stem cell extract, niacinamide, lactobionic acid, and antioxidants to help moisturize and soothe, while our ultra-fine non-nano zinc oxide provides non-oily, year-round UV defense from future aging, brown spots, and skin cancer.<\/p>",
+            "title_4": "",
+            "raw_content_4": "",
+            "title_5": "",
+            "raw_content_5": ""
+          }
+        }
+      },
+      "block_order": [
+        "164864781600492584-0",
+        "f6c90023-26e1-42f3-9be8-22c0946b8a31",
+        "164864781600492584-1",
+        "164864781600492584-2"
+      ],
+      "settings": {
+        "title": "",
+        "home_product": "face-moisturizer-with-sunscreen-age-defense",
+        "bg": "palette--light bg--neutral",
+        "image_width": "wide",
+        "align": "left",
+        "enable_video_looping": true,
+        "zoom_enable": true
+      }
+    },
+    "1648830821c3d8cadd": {
+      "type": "parallax",
+      "blocks": {
+        "d80f23f9-a83a-4a70-9fd2-cec0cd3bdc71": {
+          "type": "Image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Group_1_d848dfbe-fa1e-48ee-8df7-82d289a98620.png",
+            "image_height": 13,
+            "image_width": 100,
+            "mobile_image": "shopify:\/\/shop_images\/Group_1_18321039-88e9-480f-8266-ef7cc33781c5.png",
+            "mobile_image_width": 100,
+            "mobile_image_height": 4,
+            "aspect_ratio": "none",
+            "position": "fill",
+            "mobile_fit": "fill"
+          }
+        }
+      },
+      "block_order": [
+        "d80f23f9-a83a-4a70-9fd2-cec0cd3bdc71"
+      ],
+      "settings": {
+        "bg": "#FAFAFA",
+        "margin-top": 0
+      }
+    },
+    "1648643694859ff060": {
+      "type": "inside-item",
+      "blocks": {
+        "15947869-e107-4f54-9617-32197216ff23": {
+          "type": "inside_image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Paraben-Free_Icon_d8c8a05d-3b1a-42c8-a50e-bdf766588ccc.png",
+            "title": "Dermatologist-Recommended"
+          }
+        },
+        "5890f310-c5dc-44db-a263-56f11eb725e4": {
+          "type": "inside_image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Paraben-Free_Icon_1e8701af-9f6c-40e8-9d56-5cf286610c19.png",
+            "title": "Multi-tasking 3-in-1"
+          }
+        },
+        "2d6c983e-bb7e-4a10-8890-d88c2ec8603f": {
+          "type": "inside_image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Paraben-Free_Icon_2ca8b6e0-1d5e-482c-b44f-9197d917433a.png",
+            "title": "Safe for all skin types"
+          }
+        },
+        "a714c62c-7f6f-4650-a918-1c4d125a2028": {
+          "type": "inside_image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Paraben-Free_Icon_abb0b060-5f42-4806-96db-2af412e5e0be.png",
+            "title": "Cruelty, Paraben & Phathlate Free"
+          }
+        },
+        "768e1eab-0ed3-4166-ad70-a252f9dc483e": {
+          "type": "inside_image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Paraben-Free_Icon_2ec978c5-826e-4564-8a40-d6aa3d935a36.png",
+            "title": "Non-comedogenic for oily skin"
+          }
+        },
+        "4110e02a-0eeb-492d-b9ba-772967e94490": {
+          "type": "inside_image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Paraben-Free_Icon_1812eb1d-f5fa-4f1d-a909-b0be2ec18301.png",
+            "title": "All mineral env. safe sunscreen"
+          }
+        }
+      },
+      "block_order": [
+        "15947869-e107-4f54-9617-32197216ff23",
+        "5890f310-c5dc-44db-a263-56f11eb725e4",
+        "2d6c983e-bb7e-4a10-8890-d88c2ec8603f",
+        "a714c62c-7f6f-4650-a918-1c4d125a2028",
+        "768e1eab-0ed3-4166-ad70-a252f9dc483e",
+        "4110e02a-0eeb-492d-b9ba-772967e94490"
+      ],
+      "settings": {
+        "sec_clr": "#3d5137",
+        "wide_display": true,
+        "title": "",
+        "css_class": "inside-items",
+        "custom_css": ""
+      }
+    },
+    "164881260607160387": {
+      "type": "custom-slideshow",
+      "blocks": {
+        "bc25bf24-91da-43ac-81a3-eb72799e2cd9": {
+          "type": "Slide",
+          "settings": {
+            "text": "<h2>Recommended by Customers<\/h2>\n\n<h6>Greg B<\/h6>\n<div class=\"star\" style=\"width: 100px;\"> <\/div> <br>\nIt's not oily, and it provides me with an all-day smooth feeling on my face and neck.\nModern Ritutal is the real deal.",
+            "button_label": "READ MORE",
+            "button_link": "shopify:\/\/pages\/reviews",
+            "static_img": "shopify:\/\/shop_images\/Group_127.png"
+          }
+        },
+        "4e88afb5-ab96-4bc8-9048-385b5a663429": {
+          "type": "Slide",
+          "settings": {
+            "text": "<h2> Endorsed by Celebrities <\/h2>\n\n<h6>Brad Gilbert<\/h6>\n<div class=\"star\" style=\"width: 100px;\"> <\/div> <br>\nIt's not oily, and it provides me with an all-day smooth feeling on my face and neck.\nModern Ritutal is the real deal.",
+            "button_label": "READ MORE",
+            "button_link": "shopify:\/\/pages\/reviews",
+            "static_img": "shopify:\/\/shop_images\/Group_127_a9806d8f-e398-42c5-985f-015c813c819d.png"
+          }
+        },
+        "abd3bb86-234e-40be-a8e1-be2f365db9ad": {
+          "type": "Slide",
+          "settings": {
+            "text": "<h2>Endorsed by  Dermatologists<\/h2>\n\n<h6>Dr. Jimmy Krell<\/h6>\n<div class=\"star\" style=\"width: 100px;\"> <\/div> <br>\nIt's not oily, and it provides me with an all-day smooth feeling on my face and neck.\nModern Ritutal is the real deal.",
+            "button_label": "",
+            "button_link": "",
+            "static_img": "shopify:\/\/shop_images\/Group_137.png"
+          }
+        },
+        "371de93d-5b39-43a2-a630-e8ec6843e068": {
+          "type": "Slide",
+          "settings": {
+            "text": "<h2>We're in the Press<\/h2>\n\n<h6>Katie Couric! :)<\/h6>\n<div class=\"star\" style=\"width: 100px;\"> <\/div> <br>\nIt's not oily, and it provides me with an all-day smooth feeling on my face and neck.\nModern Ritutal is the real deal.",
+            "button_label": "READ MORE",
+            "button_link": "shopify:\/\/pages\/reviews",
+            "static_img": "shopify:\/\/shop_images\/Group_136.png"
+          }
+        }
+      },
+      "block_order": [
+        "bc25bf24-91da-43ac-81a3-eb72799e2cd9",
+        "4e88afb5-ab96-4bc8-9048-385b5a663429",
+        "abd3bb86-234e-40be-a8e1-be2f365db9ad",
+        "371de93d-5b39-43a2-a630-e8ec6843e068"
+      ],
+      "settings": {
+        "bg": "#fafafa",
+        "arrow": "#3d5137"
+      }
+    },
+    "1648732681163fd337": {
+      "type": "section-blog",
+      "disabled": true,
+      "settings": {
+        "title": "News",
+        "homepage_blog": "news",
+        "homepage_blog_count": 2,
+        "bg": "palette--light bg--neutral",
+        "color": "text--white",
+        "overlay_color": "#000000",
+        "aspect_ratio": 0.7,
+        "show_view_all": false,
+        "button_style": "btn--outline uppercase"
+      }
+    },
+    "1647437219c0e448a2": {
+      "type": "section-hero",
+      "settings": {
+        "add-cls": "cream desk-middle-center",
+        "image": "shopify:\/\/shop_images\/screenshot.jpg",
+        "mobile_image": "shopify:\/\/shop_images\/IMG_2215_1.jpg",
+        "bg_position": "center-center",
+        "height": "use_image",
+        "overlay_opacity": 10,
+        "overlay_color": "#000000",
+        "kicker": "",
+        "title": "Meet the Dermatologist, mother-daugheter duo behind Modern Ritual.",
+        "richtext": "",
+        "text_align": "align--bottom-left",
+        "text_color": "text--white",
+        "link_text": "Learn More",
+        "link": "#",
+        "button_color": "btn--primary",
+        "button_style": "btn"
+      }
+    },
+    "164735132803cbb298": {
+      "type": "section-announcement",
+      "blocks": {
+        "78119773-cbc2-470b-bc97-868035747d6a": {
+          "type": "custom",
+          "settings": {
+            "text": "Prevents Skin Cancer"
+          }
+        },
+        "9d815cb3-4674-43b0-aea5-d4ba94682f47": {
+          "type": "custom",
+          "settings": {
+            "text": "Non Greasy"
+          }
+        },
+        "96e4efa7-83cb-4558-b6b9-f6bfa7cc061b": {
+          "type": "custom",
+          "settings": {
+            "text": "Antioxidant Rich"
+          }
+        },
+        "29422d94-501b-4f21-954b-0e115d7dc53e": {
+          "type": "custom",
+          "settings": {
+            "text": "Prevents Sunburn"
+          }
+        }
+      },
+      "block_order": [
+        "78119773-cbc2-470b-bc97-868035747d6a",
+        "9d815cb3-4674-43b0-aea5-d4ba94682f47",
+        "96e4efa7-83cb-4558-b6b9-f6bfa7cc061b",
+        "29422d94-501b-4f21-954b-0e115d7dc53e"
+      ],
+      "settings": {
+        "bg_color": "#f3f1ec",
+        "color": "#3d5137",
+        "text_size": 10
+      }
+    },
+    "16488359349080d14b": {
+      "type": "parallax",
+      "blocks": {
+        "214cdc67-5c45-4a75-81e0-ec3803e5ed6d": {
+          "type": "Image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Frame_1142.png",
+            "image_height": 75,
+            "image_width": 100,
+            "mobile_image": "shopify:\/\/shop_images\/Frame_1139_1.png",
+            "mobile_image_width": 71,
+            "mobile_image_height": 58,
+            "aspect_ratio": "2\/1",
+            "position": "fill",
+            "mobile_fit": "contain"
+          }
+        }
+      },
+      "block_order": [
+        "214cdc67-5c45-4a75-81e0-ec3803e5ed6d"
+      ],
+      "settings": {
+        "bg": "#BCCDDE",
+        "margin-top": 0
+      }
+    },
+    "16488350048f270e13": {
+      "type": "parallax",
+      "disabled": true,
+      "blocks": {
+        "f46c728b-92b1-4d04-9be9-71d3d43884e3": {
+          "type": "Image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Group_1_d848dfbe-fa1e-48ee-8df7-82d289a98620.png",
+            "image_height": 7,
+            "image_width": 100,
+            "mobile_image": "shopify:\/\/shop_images\/Group_1_18321039-88e9-480f-8266-ef7cc33781c5.png",
+            "mobile_image_width": 100,
+            "mobile_image_height": 5,
+            "aspect_ratio": "none",
+            "position": "fill",
+            "mobile_fit": "fill"
+          }
+        }
+      },
+      "block_order": [
+        "f46c728b-92b1-4d04-9be9-71d3d43884e3"
+      ],
+      "settings": {
+        "bg": "#FAFAFA",
+        "margin-top": 0
+      }
+    },
+    "1648836222e54699ce": {
+      "type": "section-richtext",
+      "settings": {
+        "new-design": false,
+        "kicker": "",
+        "title": "Follow us in the #ModernRitual Movement @ModernRitual",
+        "text": "",
+        "text_size": 2,
+        "text_columns": 1,
+        "align_text": "text-center",
+        "button_text": "",
+        "button_url": "",
+        "button_color": "btn--neutral",
+        "button_style": "caps--link",
+        "height": "margin--medium",
+        "width": "wrapper",
+        "text_color": "text--neutral",
+        "bg": "palette--light bg--neutral"
+      }
+    },
+    "164906304399d78ccc": {
+      "type": "apps",
+      "blocks": {
+        "d7fb42b7-bd17-415a-9dc3-fc6352dc6ea1": {
+          "type": "shopify:\/\/apps\/instafeed\/blocks\/app-block\/c447db20-095d-4a10-9725-b5977662c9d5",
+          "settings": {
+            "heading_font": "helvetica_n4",
+            "heading_size": 20,
+            "feed_width": 100,
+            "html_area": ""
+          }
+        }
+      },
+      "block_order": [
+        "d7fb42b7-bd17-415a-9dc3-fc6352dc6ea1"
+      ],
+      "settings": {
+        "width": "wrapper",
+        "height": "margin--medium",
+        "text_color": "text--neutral",
+        "bg": "palette--light bg--neutral"
+      }
+    },
+    "164883599676a3d098": {
+      "type": "section-gallery",
+      "blocks": {
+        "164883599628a1a054-0": {
+          "type": "image",
+          "settings": {
+            "link": ""
+          }
+        },
+        "164883599628a1a054-1": {
+          "type": "image",
+          "settings": {
+            "link": ""
+          }
+        },
+        "164883599628a1a054-2": {
+          "type": "image",
+          "settings": {
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "164883599628a1a054-0",
+        "164883599628a1a054-1",
+        "164883599628a1a054-2"
+      ],
+      "settings": {
+        "full_width": false,
+        "padding": true,
+        "scale_image": true,
+        "aspect_ratio": 1,
+        "bg": "palette--light bg--neutral"
+      }
+    }
+  },
+  "order": [
+    "hero",
+    "1648632075352ab182",
+    "16486332950cefab00",
+    "164881302144758727",
+    "1648831947832beefc",
+    "164883237363b09d97",
+    "16486478164863c7eb",
+    "1648830821c3d8cadd",
+    "1648643694859ff060",
+    "164881260607160387",
+    "1648732681163fd337",
+    "1647437219c0e448a2",
+    "164735132803cbb298",
+    "16488359349080d14b",
+    "16488350048f270e13",
+    "1648836222e54699ce",
+    "164906304399d78ccc",
+    "164883599676a3d098"
+  ]
+}

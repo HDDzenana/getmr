@@ -1,0 +1,98 @@
+<div class="text-scroller PTB-30" style="background-color:{{section.settings.bg-color}};">
+  <div class="wrapper">
+    {% if section.settings.title != blank %}
+    <div class="cream fs-34 ff-ivy mb-30">{{section.settings.title}}</div>
+    {% endif %}
+  </div>
+  {% if section.settings.single-img != blank %}
+  <div class="img-wrap mb-40">
+    <div class="wrapper">
+      <img src="{{section.settings.single-img | img_url:'master'}}" />
+    </div>
+  </div>
+  {% endif %}
+  <div class="scroller-wrap">
+    <div class="wrapper">
+      <div class="scroller-text">
+        {% for block in section.blocks %}
+        <div class="text-content">
+          <div class="scroll-content-wrap">
+            {% if block.settings.title-scroll != blank %}
+            <div class="fs-20 ff-ivy mb-5 cream">{{block.settings.title-scroll}}</div>
+            {% endif %}
+            {% if block.settings.text != blank %}
+            <div class="fs-17 ff-rlight cream">{{block.settings.text}}</div>
+            {% endif %}
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+  {% if section.settings.btn-link != blank %}
+  <div class="wrapper text-center">
+  	<a href="{{section.settings.btn-link}}" class="btn u-case btn--primary mt-20">{{section.settings.btn-lbl}}</a>
+  </div>
+  {% endif %}
+</div>
+
+{% schema %}
+  {
+    "name": "Text Scroller Sec",
+    "settings": [
+      {
+        "type": "color",
+        "id": "bg-color",
+        "label": "Select Background Color",
+		"default": "#333333"
+      },
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Enter Title here",
+		"default": "Introducing The Daily"
+      },
+      {
+        "type": "image_picker",
+        "id": "single-img",
+        "label": "Upload Image here"
+      },
+      {
+        "type": "url",
+        "id": "btn-link",
+        "label": "Enter URL here"
+      },
+      {
+        "type": "text",
+        "id": "btn-lbl",
+        "label": "Enter Button Label here",
+		"default": "Our Ingredients"
+      }
+	],
+    "blocks" : [
+      {
+        "type": "text",
+        "name": "Text Scroll",
+		"settings": [			
+          {
+            "type": "text",
+            "id": "title-scroll",
+            "label": "Enter Title"
+          },			
+          {
+            "type": "richtext",
+            "id": "text",
+            "label": "Short Description",
+            "default": "<p>Rich in Vitamin D - protecting theskin from harmful UV rays reducing risk of skin cancer.</p>"
+          }
+		]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Text Scroller"
+      }
+    ]
+  }
+{% endschema %}
+

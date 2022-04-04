@@ -1,0 +1,275 @@
+<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+<script src="{{ 'flickity.js' | asset_url }}"></script>
+<link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+{{ 'flickity.css' | asset_url | stylesheet_tag }}
+
+<style>
+  .right_text strong{
+  	color : {{section.settings.color_title}}
+  }
+  
+</style>
+
+
+<section class="image-press" style='font-family:{{section.settings.main_font_new.family}},{{section.settings.main_font_new.fallback_families}};'>
+  <div data-slider style="padding: {{section.settings.padding_size}}px 0px; background-color :  {{section.settings.background_color}}">
+    <div data-slides class="main-carousel">
+    	{%for block in section.blocks%}
+      		<div data-slide class="carousel-cell" style="transform: translateX(1vw)">
+              {% if block.settings.header_logo_image.alt %}
+              <a href="{{block.settings.logo_link}}"> 
+              	<img class="head-logo {{section.settings.header_logo_position}}" src="{{block.settings.header_logo_image | img_url: '100x'}}" alt="{{block.settings.header_logo_image.alt}}" /> 
+              </a>  {% endif %}
+<!--               <img class="image-{{section.settings.image_type}}" src="{{ block.settings.image | image_url: master }}" alt="{{ block.settings.image.alt }}" /> -->
+      		
+              <div class="block-content">
+                  <div class="bottom_text">
+                    <div  class="ff-rmed" style='font-size : {{section.settings.font_size_left_text}}px; color: {{section.settings.color_title}};line-height:{{section.settings.font_size_left_text}}px'>{{block.settings.left_text}}</div>
+                    <div class="image-content-wrap">
+                    <div class="ff-rreg right_text" style="font-size : {{section.settings.font_size_right_text}}px; color: {{section.settings.color_title}} ; line-height:{{section.settings.font_size_right_text}}px">{{block.settings.right_text}}</div>
+                    
+                    {% if block.settings.header_logo_image.alt %}
+                    <img class="head-logo bottom-logo" src="{{block.settings.header_logo_image | img_url: '100x'}}" alt="{{block.settings.header_logo_image.alt}}" /> 
+                    {% endif %}
+                    </div>
+                   </div>
+              </div>
+      		</div>
+      	{%endfor%}
+    </div>
+    <div class="event_type" style="display: none">{{section.settings.event_type}}</div>
+<!--     <div class="dynamic-block-content-animations"></div> -->
+  </div>
+</section>
+
+ 
+{% schema %}
+{
+  "name": {
+    "cs": "Obrázek s textem",
+    "da": "Billede med tekst",
+    "de": "Bild mit Text",
+    "en": "Press Bar V2",
+    "es": "Imagen con texto",
+    "fi": "Kuva tekstillä",
+    "fr": "Image avec texte",
+    "it": "Immagine con testo",
+    "ja": "テキスト付き画像",
+    "ko": "텍스트 포함 이미지",
+    "nb": "Bilde med tekst",
+    "nl": "Afbeelding met tekst",
+    "pl": "Obraz z tekstem",
+    "pt-BR": "Imagem com texto",
+    "pt-PT": "Imagem com texto",
+    "sv": "Bild med text",
+    "th": "รูปภาพพร้อมข้อความ",
+    "tr": "Metin içeren görsel",
+    "vi": "Hình ảnh có chữ",
+    "zh-CN": "带文本的图片",
+    "zh-TW": "附文字的圖片"
+  },
+
+   "settings": [
+     {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background Color",
+      "default": "#FFFFFF"
+     },
+	{
+      "type": "range",
+      "id": "padding_size",
+      "min":  0,
+      "max":  100,
+      "step":  1,
+      "unit": "px" ,
+      "label": "Padding Size",
+      "default":  20
+     },
+	{
+       "type": "select",
+       "id": "text_position",
+       "options": [
+          { "value": "left", "label": "Left"},
+          { "value": "center", "label": "Center"},
+          { "value": "right", "label": "Right"}
+       ],
+       "label": "Text Position"	
+	},
+	{
+       "type": "select",
+       "id": "header_logo_position",
+       "options": [
+          { "value": "img-left", "label": "Left"},
+          { "value": "img-center", "label": "Center"},
+          { "value": "img-right", "label": "Right"}
+       ],
+       "label": "Header Logo Position"	
+	},
+	{
+       "type": "select",
+       "id": "image_type",
+       "options": [
+          { "value": "rounded", "label": "Rounded"},
+          { "value": "square", "label": "Square"}
+       ],
+       "label": "Image Type"	
+	},
+    {
+      "type": "range",
+      "id": "font_size_left_text",
+      "min":  22,
+      "max":  70,
+      "step":  1,
+      "unit": "px" ,
+      "label": "Left Font Size",
+      "default":  22
+     },
+    {
+      "type": "range",
+      "id": "font_size_right_text",
+      "min":  14,
+      "max":  38,
+      "step":  1,
+      "unit": "px" ,
+      "label": "Right Font Size",
+      "default":  22
+     },
+    {
+      "type": "color",
+      "id": "color_title",
+      "label": "Color",
+      "default": "#000000"
+     },
+	 {
+       "type": "select",
+       "id": "slider_autoplay",
+       "options": [
+          { "value": "true", "label": "On"},
+          { "value": "false", "label": "Off"}
+       ],
+       "label": "Slider Autoplay"	
+	},
+    {
+       "type": "select",
+       "id": "event_type",
+       "options": [
+          { "value": "true", "label": "Click"},
+          { "value": "false", "label": "Automatically"}
+       ],
+       "label": "Change Type"	
+	},
+    {
+       "type": "select",
+       "id": "slider_autospeed",
+       "options": [
+          { "value": "1000", "label": "1s"},
+          { "value": "2000", "label": "2s"},
+    	  { "value": "3000", "label": "3s"},
+          { "value": "4000", "label": "4s"},
+          { "value": "5000", "label": "5s"}
+       ],
+       "label": "Slider Autoplay Speed"	
+	},
+    {
+       "type": "select",
+       "id": "slider_level",
+       "options": [
+          { "value": "0.002", "label": "Fast"},
+          { "value": "0.006", "label": "Slow"}
+       ],
+       "label": "Slider Speed"	
+	},
+    {
+     "type": "font_picker",
+     "id": "main_font_new",
+     "label": "Font",
+     "default": "mono"
+   } 
+  ],
+  "blocks": [
+     {
+       "name": "Image with animation",
+       "type": "slide",
+       "settings": [
+          {
+            "type" : "image_picker",
+            "id" : "header_logo_image",
+            "label" : "Header Logo"
+          },
+          {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image"
+          },
+          {
+            "type" : "richtext",
+            "id" : "left_text",
+            "label" : "Left Text"
+          },
+          {
+            "type" : "richtext",
+            "id" : "right_text",
+            "label" : "Right Text"
+          },   {
+            "type" : "url",
+            "id" : "logo_link",
+            "label" : "Logo Link "
+          }
+       ]
+     }
+   ],
+ "presets": [
+    {
+      "name": {
+        "cs": "Obrázek s textem",
+        "da": "Billede med tekst",
+        "de": "Bild mit Text",
+        "en": "Press Bar V2",
+        "es": "Imagen con texto",
+        "fi": "Kuva tekstillä",
+        "fr": "Image avec texte",
+        "it": "Immagine con testo",
+        "ja": "テキスト付き画像",
+        "ko": "텍스트 포함 이미지",
+        "nb": "Bilde med tekst",
+        "nl": "Afbeelding met tekst",
+        "pl": "Obraz z tekstem",
+        "pt-BR": "Imagem com texto",
+        "pt-PT": "Imagem com texto",
+        "sv": "Bild med text",
+        "th": "รูปภาพพร้อมข้อความ",
+        "tr": "Metin içeren görsel",
+        "vi": "Hình ảnh có chữ",
+        "zh-CN": "带文本的图片",
+        "zh-TW": "附文字的圖片"
+      },
+      "category": {
+        "cs": "Obrázek",
+        "da": "Billede",
+        "de": "Bild",
+        "en": "Press Bar V2",
+        "es": "Imagen",
+        "fi": "Kuva",
+        "fr": "Image",
+        "it": "Immagine",
+        "ja": "画像",
+        "ko": "이미지",
+        "nb": "Bilde",
+        "nl": "Afbeelding",
+        "pl": "Obraz",
+        "pt-BR": "Imagem",
+        "pt-PT": "Imagem",
+        "sv": "Bild",
+        "th": "รูปภาพ",
+        "tr": "Görsel",
+        "vi": "Hình ảnh",
+        "zh-CN": "图片",
+        "zh-TW": "圖片"
+      }
+    }
+	]
+}
+{% endschema %}
+
+ 

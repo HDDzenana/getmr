@@ -1,0 +1,106 @@
+{% comment %}
+** Inside - dynamic **
+- Draggable section
+- Uses blocks
+{% endcomment %}
+
+{%- assign id = section.id -%}
+
+{% comment %} Content settings {% endcomment %}
+{%- assign title = section.settings.title | escape -%}
+{%- assign blocks = section.blocks -%}
+{% comment %} End content settings {% endcomment %}
+
+{% comment %} Advanced {% endcomment %}
+{%- assign css_class = section.settings.css_class -%}
+{%- assign custom_css = section.settings.custom_css -%}
+
+{% comment %} Section specific CSS {% endcomment %}
+
+
+<section class="section  pb-40 {{ css_class }} {% if section.settings.wide_display == true %}is-width-wide has-no-side-gutter{% endif %}" style="background: {{ section.settings.sec_clr}}">
+  <div class="wrapper">
+    <div class="one-whole column">
+      {% if section.settings.title != '' %}
+        <h2 class="title text-center">{{ section.settings.title }}</h2>
+      {% endif %}
+
+      {% if blocks.size > 0 %}
+        <ul class="inside-bar pdp-inside-br">
+          {% for block in blocks %}
+            {% comment %} Content settings {% endcomment %}
+            {%- assign image = block.settings.image -%}
+            {%- assign link = block.settings.link -%}
+            {% comment %} End content settings {% endcomment %}
+
+            <li class="inside-bar__item" {{ block.shopify_attributes }}>
+                {% if image != blank %}
+                  <div class="image-element__wrap">
+                    <img src="{{ image | img_url: '500x' }}" alt="">
+                  </div>
+                  <span class="fs-16 ff-rmed cream u-case">{{block.settings.title}}</span>
+                {% endif %}
+            </li>
+          {% endfor %}
+        </ul>
+      {% endif %}
+    </div>
+  </div>
+</section>
+{% schema %}
+  {
+    "name": "Inside item",
+    "class": "shopify-section--inside",
+    "settings": [
+      {
+        "type": "color",
+        "id": "sec_clr",
+        "label": "Color"
+      },
+      {
+        "type": "checkbox",
+        "id": "wide_display",
+        "label": "Wide display",
+        "default": true
+      },
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Heading"
+      },
+      {
+        "type": "text",
+        "id": "css_class",
+        "label": "CSS Class"
+      },
+      {
+        "type": "textarea",
+        "id": "custom_css",
+        "label": "Custom CSS"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "inside_image",
+        "name": "Inside item",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image",
+            "info": "400 x 300px recommended"
+          },
+		  {
+		     "type" : "text",
+			 "id" : "title",
+             "label" : "inside text"
+		  }
+        ]
+      }
+    ],
+    "presets": [{
+      "name": "Inside item",
+      "category": "Item"
+    }]
+  }
+{% endschema %}

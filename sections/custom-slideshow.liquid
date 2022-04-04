@@ -1,0 +1,271 @@
+<script crossorigin="anonymous" integrity="sha512-+1MtN0rwSlEnZo0agG99mCQChlBtfe8hyHItwWtgiD33mWvaNVZkZB9yX2S92z5HgDg1+EcitjutZejbHUcZAg==" referrerpolicy="no-referrer" src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.0.3/swiper-bundle.min.js"></script>
+<link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.0.3/swiper-bundle.css" integrity="sha512-SID9h7gl6DWMEv9gG4Msa2+Cv6Th1HK9Bswoy7ArayNta2hdRkUhhzprlgocF7X+LYH2QiroQVnYloED73SdrA==" referrerpolicy="no-referrer" rel="stylesheet"/>
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+<!-- Slider main container -->
+<div class="swiper mySwiper" style="background-color: {{section.settings.bg}};">
+  <div class="swiper-wrapper">
+    <!-- Slides -->
+    {% for block in section.blocks %}
+
+
+      <div class="swiper-slide">
+        <div class="cslider-contents-{{block.id}}" style="display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;                                                        
+    flex-wrap: wrap;
+    min-width: 100vw;
+    max-width: 100vw;
+    align-content: center;
+    justify-content: space-around !important;
+    overflow: hidden;">
+          <div class="cslidertext">
+            {{block.settings.text}} <br> <br> <br>
+            
+            <a href="{{ block.settings.button_link }}" style=" text-align:center !important; font-weight: bold;"> {{ block.settings.button_label }}</a>
+          </div> <div class="csliderstill">
+        <img src="{{ block.settings.static_img | img_url:'master'}}"  > </div>
+        </div>
+
+      </div>
+
+    {% endfor %}
+  </div>
+  <!-- If we need pagination -->
+                                                                                        <!-- <div class="swiper-pagination"></div> -->
+                                                                                      
+                                                                                        <!-- If we need navigation buttons -->
+  <div class="swiper-button-prev"></div>
+  <div class="swiper-button-next"></div>
+
+  <!-- If we need scrollbar -->
+  <div class="swiper-scrollbar"></div>
+</div>
+
+<style>
+  /* MOBILE  */
+@media only screen and (max-width: 800px) {
+
+.csliderstill {
+  	width: 40vw;
+  	height: 50vh !important;
+} 
+ 
+.swiper-button-next {
+    margin-left: 50px;
+}
+  
+.csliderstill img { 
+  	object-fit: contain !important;
+}
+  
+.swiper-button-prev {
+    left: 12vw;
+}
+  
+.cslider-contents-{{block.id}} .cslidertext  p {
+  font-size: 12px !important;
+}
+.swiper .mySwiper  {
+  height: 70vh !important;
+}
+.swiper-slide {
+  height: 70vh !important;
+}
+}
+
+/* END MOBILE */
+.swiper-button-prev:after, .swiper-button-next:after {
+  font-size: 12px;
+  color: white;    
+  padding: 0px 25px;
+  }
+
+.swiper-button-prev, .swiper-button-next {
+  	top: 90%;
+    background-color: {{section.settings.arrow}};
+    border-radius: 50%;
+    width: 40px;
+  }
+  .swiper-button-next {
+    left: 15vw !important;
+  }
+  .swiper-button-prev {
+    left: 10vw;
+  }
+.swiper .mySwiper  {
+  height: 70vh;
+  width: 100vw;
+}
+.swiper-slide {
+  height: 70vh;
+  width: 100vw;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.cslidertext {
+  width: 50vw;
+padding-left: 10vw;
+  align-self: center;
+}
+
+.csliderstill {
+  width: 45vw;
+  height: 60vh;
+  overflow: hidden;
+}
+
+.csliderstill img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+img {
+      width: 100%;
+    height: 100%;
+}
+  
+</style>
+
+
+<script>
+      var swiper = new Swiper(".mySwiper", {
+        loop: true,
+        mousewheel: false,
+          slidesPerView: 1,
+        keyboard: {
+        enabled: false,
+        onlyInViewport: false,
+        grabCursor: true,
+        speed: 1000,
+        paginationClickable: true,
+        parallax: true,
+        autoplay: false,
+        effect: "slide",
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,  
+        },
+        navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+        },
+      });
+
+              document.addEventListener('shopify:section:load', () => {
+ 		var swiper = new Swiper(".mySwiper", {
+        loop: true,
+        mousewheel: false,
+          slidesPerView: 1,
+        keyboard: {
+        enabled: false,
+        onlyInViewport: false,
+        grabCursor: true,
+        speed: 1000,
+        paginationClickable: true,
+        parallax: true,
+        autoplay: false,
+        effect: "slide",
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,  
+        },
+        navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+        },
+      });
+          })
+
+</script>
+{% schema %}
+
+{
+  "name": "Customer Slider",
+  "class": "section",
+  "settings": [
+    {
+      "type": "color",
+      "id": "bg",
+      "default": "#FAFAFA",
+      "label": "Section Background"
+    }, {
+      "type": "color",
+      "id": "arrow",
+      "default": "#000",
+      "label": "Arrow Color"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "Slide",
+      "name": "Slide",
+      "settings": [
+        {
+          "type": "liquid",
+          "id": "text",
+          "label": "Text"
+        }, {
+          "type": "text",
+          "id": "button_label",
+          "label": {
+            "da": "Knaptekst",
+            "de": "Button-Name",
+            "en": "Button label",
+            "es": "Etiqueta de botón",
+            "fi": "Tekstipainike",
+            "fr": "Texte du bouton",
+            "hi": "बटन लेबल",
+            "it": "Etichetta pulsante",
+            "ja": "ボタンのラベル",
+            "ko": "버튼 레이블",
+            "nb": "Knappetikett",
+            "nl": "Knoplabel",
+            "pt-BR": "Etiqueta de botão",
+            "pt-PT": "Etiqueta do botão",
+            "sv": "Knappetikett",
+            "th": "ป้ายกำกับปุ่ม",
+            "zh-CN": "按钮标签",
+            "zh-TW": "按鈕標籤"
+          }
+        }, {
+          "type": "url",
+          "id": "button_link",
+          "label": {
+            "da": "Knaplink",
+            "de": "Button-Link",
+            "en": "Button link",
+            "es": "Enlace de botón",
+            "fi": "Painikelinkki",
+            "fr": "Lien du bouton",
+            "hi": "बटन लिंक",
+            "it": "Link pulsante",
+            "ja": "ボタンのリンク",
+            "ko": "버튼 링크",
+            "nb": "Kobling for knapp",
+            "nl": "Knoplink",
+            "pt-BR": "Link de botão",
+            "pt-PT": "Ligação do botão",
+            "sv": "Knapplänk",
+            "th": "ลิงก์ปุ่ม",
+            "zh-CN": "按钮链接",
+            "zh-TW": "按鈕連結"
+          }
+        }, {
+          "type": "image_picker",
+          "id": "static_img",
+          "label": "Static Image"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Custom Slider With Text "
+    }
+  ]
+}
+
+{% endschema %} 

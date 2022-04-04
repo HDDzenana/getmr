@@ -1,0 +1,51 @@
+// custom jQuery
+
+jQuery( document ).ready(function() {
+  jQuery('.scroller-text').slick({
+    infinite: false,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows:false,
+    dots:true
+  });
+  
+  // Home review 
+  jQuery('.home-image-section').slick({
+    infinite: false,
+    speed: 300,
+    slidesToShow: 3,
+    slidesToScroll: 3,
+    dots:true,
+    arrows:false,
+    prevArrow:'<span class="prev-arr slick-arr"></span>',
+    nextArrow:'<span class="next-arr slick-arr"></span>',
+    responsive: [
+      {
+        breakpoint: 1025,
+        settings: {
+          infinite: true,
+
+        }
+      },
+      {
+        breakpoint: 767,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          arrows:false,
+          dots:true
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          arrows:false,
+          dots:true
+        }
+      }
+
+    ]
+  }); 
+});

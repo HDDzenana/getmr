@@ -1,0 +1,313 @@
+{{ '3in1custom.css' | asset_url | stylesheet_tag }}
+<link rel="stylesheet" href="{{ '3in1custom.css' | asset_url }}" media="print" onload="this.media='all'">
+
+<div class="backed_sec">
+	<div class="container">
+		<div class="backed_heading text-center">
+          {{ section.settings.title }}
+			
+		</div>
+		<div class="science_part"> 
+          <div class="col-md-4 left_shap">
+         {% for block in section.blocks %}
+           {%- case block.type -%}
+          {%- when 'text_block' -%}
+			<ul>
+					<li>
+					  <span><img src="{{ block.settings.image | img_url:'master'}}"></span>
+                      <p>{{ block.settings.text}}<small><img src="{{ block.settings.image2 | img_url:'master'}}"></small></p>
+					</li>
+				</ul>
+          
+          {%- endcase -%}
+			 {%endfor%}</div>
+        <div class="col-md-4 science-center">
+           <figure><img src="  {{ section.settings.middle-image | img_url:'master'}}"></figure>
+          </div>
+			<div class="col-md-4 right_shap">
+              {% for block in section.blocks %}
+           {%- case block.type -%}
+          {%- when 'select' -%}
+             <ul>
+					<li>
+						<p><small><img src="{{ block.settings.image-right | img_url:'master'}}"></small>{{ block.settings.text-right}}</p>
+						<span><img src="{{ block.settings.image-right2 | img_url:'master'}}"></span>
+					</li>
+				</ul>
+			
+          {%- endcase -%}
+			 {%endfor%}
+		</div>
+          
+        <div class="brainvault-mobile-part">
+          <figure><img class="mobile-sec" src= "https://cdn.shopify.com/s/files/1/0584/0804/2701/files/diagram-img.jpg?v=1629264775"></figure>	 
+        </div> 
+          
+		<div class="stay_safe">
+			<h3> {{ section.settings.footer-title }}</h3>
+			<a href="{{ section.settings.button_link }}"> {{ section.settings.button_label }}</a>
+		</div>
+	</div>
+</div>
+</div>
+
+{% schema %}
+{
+  "name":"3-in-1 section",
+  "class": "index-section",
+  "settings": [
+    {
+      "type": "textarea",
+      "id": "title",
+      "label": {
+        "da": "Overskrift",
+        "de": "Titel",
+        "en": "Heading",
+        "es": "Título",
+        "fi": "Otsake",
+        "fr": "En-tête",
+        "hi": "शीर्षक",
+        "it": "Heading",
+        "ja": "見出し",
+        "ko": "제목",
+        "nb": "Overskrift",
+        "nl": "Kop",
+        "pt-BR": "Título",
+        "pt-PT": "Título",
+        "sv": "Rubrik",
+        "th": "ส่วนหัว",
+        "zh-CN": "标题",
+        "zh-TW": "標題"
+      }
+    },
+{
+       "type":"image_picker",
+       "id": "middle-image",
+       "label": "Middle Image"
+   },
+  {
+      "type": "textarea",
+      "id": "footer-title",
+      "label": {
+        "da": "Overskrift",
+        "de": "Titel",
+        "en": "Heading",
+        "es": "Título",
+        "fi": "Otsake",
+        "fr": "En-tête",
+        "hi": "शीर्षक",
+        "it": "Heading",
+        "ja": "見出し",
+        "ko": "제목",
+        "nb": "Overskrift",
+        "nl": "Kop",
+        "pt-BR": "Título",
+        "pt-PT": "Título",
+        "sv": "Rubrik",
+        "th": "ส่วนหัว",
+        "zh-CN": "标题",
+        "zh-TW": "標題"
+      }
+    },
+   {
+          "type": "text",
+          "id": "button_label",
+          "label": {
+            "da": "Knaptekst",
+            "de": "Button-Name",
+            "en": "Button label",
+            "es": "Etiqueta de botón",
+            "fi": "Tekstipainike",
+            "fr": "Texte du bouton",
+            "hi": "बटन लेबल",
+            "it": "Etichetta pulsante",
+            "ja": "ボタンのラベル",
+            "ko": "버튼 레이블",
+            "nb": "Knappetikett",
+            "nl": "Knoplabel",
+            "pt-BR": "Etiqueta de botão",
+            "pt-PT": "Etiqueta do botão",
+            "sv": "Knappetikett",
+            "th": "ป้ายกำกับปุ่ม",
+            "zh-CN": "按钮标签",
+            "zh-TW": "按鈕標籤"
+          }
+        },
+        {
+          "type": "url",
+          "id": "button_link",
+          "label": {
+            "da": "Knaplink",
+            "de": "Button-Link",
+            "en": "Button link",
+            "es": "Enlace de botón",
+            "fi": "Painikelinkki",
+            "fr": "Lien du bouton",
+            "hi": "बटन लिंक",
+            "it": "Link pulsante",
+            "ja": "ボタンのリンク",
+            "ko": "버튼 링크",
+            "nb": "Kobling for knapp",
+            "nl": "Knoplink",
+            "pt-BR": "Link de botão",
+            "pt-PT": "Ligação do botão",
+            "sv": "Knapplänk",
+            "th": "ลิงก์ปุ่ม",
+            "zh-CN": "按钮链接",
+            "zh-TW": "按鈕連結"
+          }
+        }
+  ],
+  "blocks": [
+    {
+      "type": "text_block",
+      "name": "Row1",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": {
+            "da": "Billede",
+            "de": "Foto",
+            "en": "Image",
+            "es": "Imagen",
+            "fi": "Kuva",
+            "fr": "Image",
+            "hi": "इमेज",
+            "it": "Immagine",
+            "ja": "画像",
+            "ko": "이미지",
+            "nb": "Bilde",
+            "nl": "Afbeelding",
+            "pt-BR": "Imagem",
+            "pt-PT": "Imagem",
+            "sv": "Bild",
+            "th": "รูปภาพ",
+            "zh-CN": "图片",
+            "zh-TW": "圖片"
+          }
+        },
+        {
+          "type": "textarea",
+          "id": "text",
+          "label": {
+            "da": "Overskrift",
+            "de": "Text",
+            "en": "Heading",
+            "es": "Título",
+            "fi": "Otsake",
+            "fr": "En-tête",
+            "hi": "शीर्षक",
+            "it": "Heading",
+            "ja": "見出し",
+            "ko": "제목",
+            "nb": "Overskrift",
+            "nl": "Kop",
+            "pt-BR": "Título",
+            "pt-PT": "Título",
+            "sv": "Rubrik",
+            "th": "ส่วนหัว",
+            "zh-CN": "标题",
+            "zh-TW": "標題"
+          },
+          "default": {
+            "da": "Tilføj en titel eller et slogan",
+            "de": "Titel oder Text hinzufügen",
+            "en": "Add a title or tagline",
+            "es": "Agregar un título o eslogan",
+            "fi": "Lisää otsikko tai iskulause",
+            "fr": "Ajouter un titre ou un slogan",
+            "hi": "एक शीर्षक या टैगलाइन जोड़ें",
+            "it": "Aggiungi un titolo o una tagline",
+            "ja": "タイトルまたはキャッチコピーを追加する",
+            "ko": "제목 또는 슬로건 추가",
+            "nb": "Legg til en tittel eller er slagord",
+            "nl": "Voeg een titel of een slogan toe",
+            "pt-BR": "Adicione um título ou slogan",
+            "pt-PT": "Adicionar título ou slogan",
+            "sv": "Lägg till en titel eller tagline",
+            "th": "เพิ่มชื่อเรื่องหรือสโลแกน",
+            "zh-CN": "添加标题或标语",
+            "zh-TW": "新增標題或標語"
+          }
+        },
+{
+       "type":"image_picker",
+       "id": "image2",
+       "label": "image2"
+   }
+        
+      ]
+    },
+ {
+      "type": "image_picker",
+      "name": "Image",
+      "settings": [
+        {
+          "id": "middle-image",
+          "type": "image_picker",
+       		"label": "Middle Image"
+        }
+]
+},
+ {
+      "type": "select",
+      "name": "Row2",
+      "settings": [
+       {
+          "type": "image_picker",
+          "id": "image-right",
+          "label": "Image Right"
+        },
+        {
+          "type": "textarea",
+          "id": "text-right",
+          "label":"Text Right"
+        },
+{
+       "type":"image_picker",
+       "id": "image-right2",
+       "label": "image right2"
+   }
+      ]
+    }
+
+  ],
+ "presets": [
+    {
+      "name": "3-in-1 section",
+      "category": {
+        "da": "Tekst",
+        "de": "Text",
+        "en": "Text",
+        "es": "Texto",
+        "fi": "Teksti",
+        "fr": "Texte",
+        "hi": "टेक्स्ट",
+        "it": "Testo",
+        "ja": "テキスト",
+        "ko": "텍스트",
+        "nb": "Tekst",
+        "nl": "Tekst",
+        "pt-BR": "Texto",
+        "pt-PT": "Texto",
+        "sv": "Text",
+        "th": "ข้อความ",
+        "zh-CN": "文本",
+        "zh-TW": "文字"
+      },
+      "blocks": [
+        {
+          "type": "text_block"
+        },
+        {
+          "type": "text_block"
+        },
+        {
+          "type": "text_block"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

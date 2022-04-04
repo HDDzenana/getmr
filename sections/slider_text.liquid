@@ -1,0 +1,191 @@
+{{ 'text_slider.css' | asset_url | stylesheet_tag }}
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<section id="text_slider" class="slider-text " style='font-family:{{section.settings.arrows_font_new.family}}, sans-serif;'>
+  <div class="container PTB-30" style="background-color : {{section.settings.background_color}}">
+    <div class="head_side">
+      {%unless section.settings.retangle%}
+      	<span class="header_title" style="font-size: {{section.settings.title_size}}px ; color:{{section.settings.color_title}}">{{section.settings.title}}</span>
+      {%else%}
+      	<span class="retangle header_title" style="font-size: {{section.settings.title_size}}px ; color:{{section.settings.color_title}}">{{section.settings.title}}</span>
+      {%endunless%}
+    </div>
+    <div class="main_slider sider-{{section.settings.silder_type}}">
+      {%for block in section.blocks%}
+      		<div class="item_list">
+              <div class="slider_text ff-ivy fs-32" style="color : {{section.settings.color_title}}; font-size: {{block.settings.font_size_footer_menu}}px">{{block.settings.text}}</div>
+              <div class="footer_side">
+                {% if block.settings.bottom_logo %}
+                <img class="bottom-img" src="{{block.settings.bottom_logo | img_url: '100x'}}" alt="{{block.settings.bottom_logo.alt}}" />
+                {% endif %}
+              </div>      		
+      		</div>
+      	{%endfor%}
+    </div>
+  </div>
+</section>
+
+
+{% schema %}
+{
+  "name": "Press Bar V1",
+  "tag": "section",
+  "class": "slideshow",
+   "settings": [
+     {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background color",
+      "default": "#FFFFFF"
+     },
+	{
+        "type" : "text",
+        "id" : "title",
+        "label" : "Title"
+    },
+    {
+      "type": "range",
+      "id": "title_size",
+      "min":  22,
+      "max":  70,
+      "step":  1,
+      "unit": "px" ,
+      "label": "Total Font size",
+      "default":  22
+     },
+    {
+      "type": "checkbox",
+      "id": "retangle",
+      "label": "Retangle",
+      "default": false
+    },
+    {
+       "type": "select",
+       "id": "silder_type",
+       "options": [
+          { "value": "text", "label": "Previous/Next"},
+          { "value": "arrow", "label": "Arrow"},
+		  { "value": "arrow round-arrow", "label": "Round Arrow"}
+       ],
+       "label": "silder type"	
+	},
+    {
+      "type": "color",
+      "id": "color_title",
+      "label": "Text Color",
+      "default": "#000000"
+     },
+	{
+      "type": "color",
+      "id": "slider_arrows_color",
+      "label": "Slider Arrows Color",
+      "default": "#000000"
+     },
+	 {
+     "type": "font_picker",
+     "id": "arrows_font_new",
+     "label": "Font",
+     "default": "sans-serif"
+   }
+  ],
+  "blocks": [
+     {
+       "name": "Slide",
+       "type": "slide",
+       "settings": [
+		{
+			"type" : "liquid",
+			"id" : "text",
+			"label" : "Text"
+		},
+		{
+          "type": "range",
+          "id": "font_size_footer_menu",
+          "min":  14,
+          "max":  60,
+          "step":  1,
+          "unit": "px" ,
+          "label": "Font size",
+          "default":  16
+         },
+         {
+          "type" : "image_picker",
+          "id" : "bottom_logo",
+          "label" : "Bottom Logo"
+        }
+       ]
+     }
+   ],
+"presets": [
+    {
+      "name": {
+        "cs": "Obrázek s textem",
+        "da": "Billede med tekst",
+        "de": "Bild mit Text",
+        "en": "Press Bar V1",
+        "es": "Imagen con texto",
+        "fi": "Kuva tekstillä",
+        "fr": "Image avec texte",
+        "it": "Immagine con testo",
+        "ja": "テキスト付き画像",
+        "ko": "텍스트 포함 이미지",
+        "nb": "Bilde med tekst",
+        "nl": "Afbeelding met tekst",
+        "pl": "Obraz z tekstem",
+        "pt-BR": "Imagem com texto",
+        "pt-PT": "Imagem com texto",
+        "sv": "Bild med text",
+        "th": "รูปภาพพร้อมข้อความ",
+        "tr": "Metin içeren görsel",
+        "vi": "Hình ảnh có chữ",
+        "zh-CN": "带文本的图片",
+        "zh-TW": "附文字的圖片"
+      },
+      "category": {
+        "cs": "Obrázek",
+        "da": "Billede",
+        "de": "Bild",
+        "en": "Press Bar V1",
+        "es": "Imagen",
+        "fi": "Kuva",
+        "fr": "Image",
+        "it": "Immagine",
+        "ja": "画像",
+        "ko": "이미지",
+        "nb": "Bilde",
+        "nl": "Afbeelding",
+        "pl": "Obraz",
+        "pt-BR": "Imagem",
+        "pt-PT": "Imagem",
+        "sv": "Bild",
+        "th": "รูปภาพ",
+        "tr": "Görsel",
+        "vi": "Hình ảnh",
+        "zh-CN": "图片",
+        "zh-TW": "圖片"
+      }
+    }
+  ]
+}
+{% endschema %}
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/jquery.slick/1.4.1/slick.min.js"></script>
+<script src="{{ 'text_slider.js' | asset_url }}"></script>
+
+
+
+<style>
+  .main_slider button{
+    color: {{section.settings.slider_arrows_color}};
+    font-family: '{{ section.settings.arrows_font_new.family }}', sans-serif;
+  }
+  .next-arrow{
+  	border-left: 15px solid {{section.settings.slider_arrows_color}};
+  }
+  .prev-arrow{
+  	border-right: 15px solid {{section.settings.slider_arrows_color}};
+  }
+  
+</style>

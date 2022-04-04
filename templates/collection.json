@@ -1,0 +1,115 @@
+{
+  "sections": {
+    "hero": {
+      "type": "collection-hero",
+      "settings": {
+        "text_align": "align--middle-center",
+        "show_title": true,
+        "show_title_below": false,
+        "show_description": true,
+        "show_description_below": false,
+        "show_image": true,
+        "bg_position": "center-center",
+        "image_height": "use_screen_one_third",
+        "overlay_opacity": 20,
+        "overlay_color": "#000",
+        "text_color": "text--white"
+      }
+    },
+    "subcollections": {
+      "type": "collection-sub",
+      "settings": {
+        "show_subcollection": true,
+        "text_color": "text--white",
+        "text_align": "align--middle-center",
+        "select_image": "collection",
+        "bg_position": "center-center",
+        "aspect_ratio": 0.6,
+        "overlay_opacity": 20,
+        "overlay_color": "#000"
+      }
+    },
+    "main": {
+      "type": "collection",
+      "blocks": {
+        "collections": {
+          "type": "collections",
+          "settings": {
+            "title": "All collections"
+          }
+        },
+        "filters": {
+          "type": "filters",
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "collections",
+        "filters"
+      ],
+      "settings": {
+        "grid_setting_large": 3,
+        "grid_setting_small": 2,
+        "product_limit": 15,
+        "enable_layout_toggle": true,
+        "collection_sorting": true,
+        "hide_sidebar": true
+      }
+    },
+    "16454530328c706ff2": {
+      "type": "section-slideshow",
+      "blocks": {
+        "1645453032c92e5268-0": {
+          "type": "image",
+          "settings": {
+            "bg_position": "center-center",
+            "overlay_opacity": 15,
+            "overlay_color": "#000",
+            "kicker": "Alfred A.",
+            "title": "This is a good products",
+            "richtext": "<p>\"Works like a champ! It does not feel oily, and it provides me an all-day smooth feeling on my face and neck\"<\/p>",
+            "text_align": "align--middle-center",
+            "text_color": "text--white",
+            "link_text": "shop sunscreen",
+            "link": "",
+            "button_color": "btn--white",
+            "button_style": "btn"
+          }
+        },
+        "1645453032c92e5268-1": {
+          "type": "image",
+          "settings": {
+            "bg_position": "center-center",
+            "overlay_opacity": 15,
+            "overlay_color": "#000",
+            "kicker": "Introducing",
+            "title": "Image slideshow",
+            "richtext": "<p>Tell your brand's story through images.<\/p>",
+            "text_align": "align--middle-center",
+            "text_color": "text--white",
+            "link_text": "View products",
+            "link": "",
+            "button_color": "btn--white",
+            "button_style": "btn"
+          }
+        }
+      },
+      "block_order": [
+        "1645453032c92e5268-0",
+        "1645453032c92e5268-1"
+      ],
+      "settings": {
+        "autoplay": false,
+        "autoplay_speed": 8,
+        "height": "use_screen_two_thirds"
+      }
+    }
+  },
+  "order": [
+    "hero",
+    "subcollections",
+    "main",
+    "16454530328c706ff2"
+  ]
+}

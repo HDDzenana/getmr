@@ -1,0 +1,142 @@
+<div class="text-scroller custom-review {% if section.settings.border-bottom != blank %} review-border{% endif %}">
+  <div class="wrapper">
+    {% if section.settings.title != blank %}
+    <div class="green fs-20 ff-ivy mb-50 text-center border-text">{{section.settings.title}}</div>
+    {% endif %}
+  </div>
+  
+  <div class=" mid-green-dots">
+      <div class="scroller-text">
+        {% for block in section.blocks %}
+        
+        <div class="text-content pos-rel">
+          {% if block.settings.review-url != blank %}<a href="{{block.settings.review-url}}" class="full-link"></a>{% endif%}
+          {% if block.settings.review-img != blank %}
+          <div class="review-img mb-30{% if block.settings.crop-img == true %} crop-img{% endif %}">
+            <div class="{% if block.settings.full-img == true %}no-wrapper{% else %}wrapper{% endif %}">
+              <img src="{{block.settings.review-img | img_url:'master'}}" />
+            </div>
+          </div>
+          {% endif %}
+          <div class="scroller-wrap green">
+            <div class="scroll-content-wrap">            
+              {% if block.settings.title-scroll != blank %}
+              <div class="fs-20 ff-ivy green">{{block.settings.title-scroll}}</div>
+              {% endif %}
+              {% if block.settings.review-star > "0" %}
+              	<div class="star" style="width:{{block.settings.review-star | times:20}}px"></div>
+              {% endif %}
+              {% if block.settings.text != blank %}
+              <div class="fs-17 ff-rlight green">{{block.settings.text}}</div>
+              {% endif %}
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+  </div>
+  {% if section.settings.btn-link != blank %}
+  <div class="wrapper text-center">
+  	<a href="{{section.settings.btn-link}}" class="btn u-case btn--primary mt-20">{{section.settings.btn-lbl}}</a>
+  </div>
+  {% endif %}
+</div>
+
+{% schema %}
+  {
+    "name": "Review Scroller Sec",
+    "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Enter Title here",
+		"default": "Introducing The Daily"
+      },
+      {
+        "type": "checkbox",
+        "id": "border-bottom",
+        "label": "Check this to display bottom border",
+        "default" : false
+      }
+	],
+    "blocks" : [
+      {
+        "type": "text",
+        "name": "Text Scroll",
+		"settings": [	
+		  {
+            "type": "image_picker",
+            "id": "review-img",
+            "label": "Upload Image here"
+      	  },
+		  {
+            "type": "url",
+            "id": "review-url",
+            "label": "Enter URL here"
+      	  },
+		  {
+            "type": "checkbox",
+            "id": "full-img",
+            "label": "Full Screen Image",
+			"default" : false
+      	  },
+		  {
+            "type": "checkbox",
+            "id": "crop-img",
+            "label": "Diagonal Crop",
+			"default" : false
+      	  },
+          {
+            "type": "text",
+            "id": "title-scroll",
+            "label": "Enter Name"
+          },	
+		  {
+            "type": "select",
+            "id": "review-star",
+            "label": "Select Ratings",
+			"default" : "0",
+			"options": [
+				{
+                  "value" : "0",
+                  "label" : "Select Star"
+				},
+				{
+                  "value" : "1",
+                  "label" : "1 Star"
+				},
+				{
+                  "value" : "2",
+                  "label" : "2 Star"
+				},
+				{
+                  "value" : "3",
+                  "label" : "3 Star"
+				},
+				{
+                  "value" : "4",
+                  "label" : "4 Star"
+				},
+				{
+                  "value" : "5",
+                  "label" : "5 Star"
+				}
+			]
+          },
+          {
+            "type": "richtext",
+            "id": "text",
+            "label": "Short Description",
+            "default": "<p>Rich in Vitamin D - protecting theskin from harmful UV rays reducing risk of skin cancer.</p>"
+          }
+		]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Review Scroller"
+      }
+    ]
+  }
+{% endschema %}
+

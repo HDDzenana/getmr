@@ -1,0 +1,135 @@
+{% if section.blocks.size > 0 %}
+<style>
+  .hover-over-image{
+    background-color:{% render 'color_to_rgba', color: section.settings.bg-color, alpha: '0.4' %};    
+  }
+</style>
+
+<div class="PTB-50 mid-green-dots">
+<div class="wrapper">
+  <div class="row f-space f fw home-image-section">
+    {% for block in section.blocks %}
+    <div class="col-4 space-div">
+      <div class="hover-on-image pos-rel">
+        <div class="content-overlay"></div>
+        <img src="{{block.settings.Image | img_url:'master'}}" class="image-hover">
+        <div class="hover-over-image">
+          <div class="hover-wrap">
+          <div class="text-desc fs-17 ff-rlight cream">{{block.settings.desc}}</div>
+          
+          <div class="star" style="width:{{block.settings.select}}px"></div>
+          <div class="client-name fs-20 ff-ivy cream">{{block.settings.clientName}}</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+</div>
+{% endif %}
+
+{% schema %}
+  {
+    "name": "Home Review",
+    "settings": [
+    {
+      "type": "color",
+      "id": "bg-color",
+      "label": "Select Background Hover color",
+      "default": "#FFFFFF"
+    }
+	],
+	"blocks": [
+      { 
+       "name": "Home Review Section",
+       "type": "Image",
+       "settings": [
+          {
+            "type": "image_picker",
+            "id": "Image",
+            "label": "Image"
+          },
+		  
+		  {
+            "type": "richtext",
+            "id": "desc",
+            "label": "On Hover Text Description"
+          },
+		  {
+          "type": "select",
+		  "label": "Select Reviews",
+          "options": [
+            {
+          
+              "value": "20",
+              "label": "1 star"
+            },
+            {
+              
+              "value": "40",
+              "label": "2 star"
+            },
+            {
+              
+              "value": "60",
+              "label": "3 star"
+            },
+            {
+              
+              "value": "80",
+              "label": "4 star"
+            },
+            {
+              
+              "value": "100",
+              "label": "5 star"
+            }
+          ],
+          "id": "select"
+        },
+		{
+            "type": "text",
+            "id": "clientName",
+            "label": "Client Name"
+          }
+		  
+       ]
+     }
+   ],
+	"presets": [
+    {
+      "name": "Review Section",
+      "blocks": [
+        
+      ]
+    }
+  ]
+  }
+{% endschema %}
+
+<style>
+/*   .hover-over-image{
+  	position: absolute;
+    text-align: center;
+    padding-left: 2em;
+    padding-right: 2em;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    opacity: 0;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    -webkit-transition: all 0.3s ease-in-out 0s;
+    -moz-transition: all 0.3s ease-in-out 0s;
+    transition: all 0.3s ease-in-out 0s;
+  }
+  
+  .hover-on-image:hover .hover-over-image{
+  	opacity:1;
+  } */
+  
+  
+  
+</style>

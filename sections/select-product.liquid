@@ -1,0 +1,101 @@
+{% if section.settings.select_product != blank %}
+<div class="selected-product PTB-30" style="background-color:{{section.settings.bg-color}};">
+  <div class="wrapper">
+    {% if section.settings.title != blank %}
+    <div class="cream fs-34 ff-ivy mb-30">{{section.settings.title}}</div>
+    {% endif %}
+  </div>
+  {% if section.settings.short-desc != blank %}
+  <div class="img-wrap mb-40 text-left">
+    <div class="wrapper">
+      <div class="fs-15 cream ff-rlight">{{section.settings.short-desc}}</div>
+    </div>
+  </div>
+  {% endif %}
+  <div class="wrapper">
+    {% assign product = section.settings.select_product %}
+    <div class="product-wrap">
+      <div class="title-image">
+        <div class="fs-22 ff-ivy mb-5 cream">{{product.title}}</div>
+        <div class="p-price fs-17 ff-rmed cream mb-20">{{product.price | money_with_currency}} <strike>{{product.compare_at_price_min | money_with_currency}}</strike></div>
+        {% if section.settings.single-img != blank %}
+        <img src="{{section.settings.single-img | img_url:'345x200'}}" />
+        {% else %}
+        <img src="{{product.featured_image.src | img_url:'345x200'}}" />
+        {% endif %}
+      </div>
+      <div class="product-content-wrap">
+        <div class="fs-15 cream mb-20">
+          {% if section.settings.p-desc != blank %}
+          {{section.settings.p-desc}}
+          {% else %}
+          {{product.description}}
+          {% endif %}
+        </div>
+        <form method="post" action="/cart/add" class="text-center mb-0">
+
+          <input type="hidden" name="id" value="{{ product.variants.first.id }}" />
+
+          <input min="1" type="hidden" id="quantity" name="quantity" value="1"/>
+
+          <button type="submit" name="add" class="btn  btn--primary uppercase btn--add-to-cart" data-add-to-cart
+                  {% unless product.variants.first.available %}disabled="disabled"{% endunless %}>
+            <span class="btn-state-ready">
+              <span data-add-to-cart-text> Add to cart</span>
+            </span>
+
+          </button>
+
+        </form>
+
+      </div>
+    </div>
+  </div>
+</div>
+{% endif %}
+
+{% schema %}
+  {
+    "name": "Single Product Sec",
+    "settings": [
+      {
+        "type": "color",
+        "id": "bg-color",
+        "label": "Select Background Color",
+		"default": "#666666"
+      },
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Enter Title here",
+		"default": "Your new recurring morning ritual..."
+      },
+      {
+        "type": "richtext",
+        "id": "short-desc",
+        "label": "Enter Short Description here"
+      },
+      {
+        "type": "product",
+        "id": "select_product",
+        "label": "Product"
+      },
+      {
+        "type": "image_picker",
+        "id": "single-img",
+        "label": "Upload Image here"
+      },
+      {
+        "type": "html",
+        "id": "p-desc",
+        "label": "Product Description"
+      }
+	],
+    "presets": [
+      {
+        "name": "Single Product"
+
+      }
+    ]
+  }
+{% endschema %}

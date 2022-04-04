@@ -1,0 +1,38 @@
+{% if section.settings.img != blank %}
+<div class="title-img-only PTB-30" style="background-color:{{section.settings.bg-color}};">
+  {% if section.settings.title != blank %}
+  <div class="wrapper">
+    <div class="fs-34 mb-30 ff-ivy cream">{{section.settings.title}}</div>    
+  </div>
+  {% endif %}
+  <div class="single-wrap"><img src="{{section.settings.img | img_url:'master'}}" /></div>
+</div>
+{% endif %}
+{% schema %}
+  {
+    "name": "Title Image Sec",
+    "settings": [
+      {
+        "type": "color",
+        "id": "bg-color",
+        "label": "Select Background Color",
+		"default": "#3D5137"
+      },
+	  {
+        "type": "text",
+        "id": "title",
+        "label": "Enter title here"
+	  },
+	  {
+        "type": "image_picker",
+        "id": "img",
+        "label": "Upload Image here"
+	  }
+	],
+    "presets": [
+      {
+        "name": "Title Image only"
+      }
+    ]
+  }
+{% endschema %}

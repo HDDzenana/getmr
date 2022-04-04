@@ -1,0 +1,71 @@
+{%- assign blog = blogs[section.settings.homepage_blog] -%}
+{%- assign post_count = section.settings.homepage_blog_count -%}
+<div class=" PTB-30 section-{{ section.id }} {{ section.settings.bg }}">
+  <div class="wrapper-blog">
+    {% unless section.settings.title == '' %}
+    <div class="wrapper"><div class="green fs-20 ff-ivy mb-40 border-text text-center">{{ section.settings.title  }}</div></div>
+    {% endunless %}
+    {% unless blog == blank or blog.empty? %}
+    <div class="f fw">
+      {% for article in blog.articles limit: post_count %}
+      <div class="col-6 mob-100">
+        <div class="wrapper">
+        <div class="blog-content">
+          <div class="mb-15"><a href="{{ article.url }}" class="green fs-20 ff-ivy">{{ article.title }}</a></div>
+          <div class="fs-15 ff-rlight">{{article.content | strip_html | truncate: 285, "" }}</div>
+        </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+    {% endunless %}
+    {% if section.settings.show_view_all %}
+    <div class="wrapper">
+    <div class="text-center-md">
+      <a href="{{ blog.url }}" class="u-case btn btn--primary">
+        {{ 'collections.general.view_all' | t }}
+      </a>
+    </div>
+    </div>
+    {% endif %}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Custom Blog posts",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Heading",
+      "default": "News"
+    },
+    {
+      "type": "blog",
+      "id": "homepage_blog",
+      "label": "Blog"
+    },
+    {
+      "type":    "range",
+      "id":      "homepage_blog_count",
+      "min":     1,
+      "max":     3,
+      "step":    1,
+      "label":   "Number of posts to display",
+      "default": 2
+    },
+    {
+      "type": "checkbox",
+      "id": "show_view_all",
+      "label": "Show 'View all' button",
+      "default": false
+    }
+  ],
+  "presets": [
+    {
+      "name": "Custom Blog posts"
+    }
+  ]
+}
+{% endschema %}
